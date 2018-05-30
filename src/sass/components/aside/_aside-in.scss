@@ -1,0 +1,15 @@
+.main-aside__in {
+  margin-top: auto;
+  @include reset-btn;
+
+  @include small {
+    margin-left: auto;
+    margin-top: 0;
+  }
+}
+
+.main-aside__in-icon {
+  @include small {
+    max-width: 25px;
+  }
+}

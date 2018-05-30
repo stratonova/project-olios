@@ -1,0 +1,31 @@
+.maincontent--search {
+  background: url('../img/main-bg.png') bottom center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 165px;
+
+
+  &:after {
+    width: 100%;
+    min-height: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, .9);
+  }
+
+  @include medium {
+    padding-top: 130px;
+  }
+
+  @include small{
+    padding-top: 100px;
+  }
+}
+
+.search {
+  @include container;
+  z-index: 9;
+  position: relative;
+}

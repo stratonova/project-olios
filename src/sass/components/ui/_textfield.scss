@@ -1,0 +1,68 @@
+.textfield-wrap {
+  margin: 5px 0;
+  width: 100%;
+}
+
+.textfield {
+  font-size: 140px;
+  font-weight: 100;
+  width: 100%;
+  display: block;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding-right: 30px;
+  border-bottom: 2px solid rgba(0, 0, 0, .1);
+
+  @include large {
+    font-size: 70px;
+  }
+
+  @include small {
+    font-size: 30px;
+  }
+}
+
+.textfield-inner {
+  position: relative;
+}
+
+.textfield-clear {
+  @include reset-btn;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-84%);
+
+  svg {
+    @include size(30px, 30px);
+  }
+
+  &:hover .close-icon {
+    fill: $blue;
+  }
+}
+
+.close-icon {
+  fill: $grey;
+}
+
+.textfield-label {
+  font-size: 36px;
+  color: $grey;
+  font-weight: 300;
+  display: block;
+  margin-top: 30px;
+
+  @include large {
+    font-size: 26px;
+    margin-top: 15px;
+  }
+
+  @include small {
+    font-size: 18px;
+  }
+}

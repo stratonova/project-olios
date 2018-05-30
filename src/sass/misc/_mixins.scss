@@ -1,0 +1,92 @@
+@mixin reset-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin extra-large {
+  @media screen and (max-width: $extra-large) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media screen and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media screen and (max-width: $medium) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin extra-small {
+  @media screen and (max-width: $extra-small) {
+    @content;
+  }
+}
+
+
+@mixin ui-btn($color, $background) {
+  background: $background;
+  color: $color;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 17px 55px 15px 55px;
+  text-transform: uppercase;
+  border-radius: 30px;
+
+  @include small {
+    font-size: 14px;
+    padding: 12px 45px 10px 45px;
+  }
+
+}
+
+@mixin container {
+  width: 1570px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media screen and (max-width: 2001px) {
+    width: 1170px;
+  }
+
+  @media screen and (max-width: 1571px) {
+    width: 100%;
+  }
+}
+
+@mixin titles($size: 48px) {
+  font-size: $size;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 100;
+  line-height: 1;
+  margin: 0;
+
+  @include medium {
+    font-size: 40px;
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

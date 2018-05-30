@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+
+  @include small {
+    overflow-y: scroll;
+    height: auto;
+  }
+}
+
+.maincontent {
+  width: 100%;
+  padding-left: 144px;
+  @include small {
+    padding-left: 0;
+  }
+}
+
+.maincontent--pages {
+  background: $lightgrey;
+  padding-bottom: 50px;
+
+  @include small {
+    padding-bottom: 100px;
+  }
+}

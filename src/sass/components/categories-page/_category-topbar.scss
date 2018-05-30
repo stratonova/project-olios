@@ -1,0 +1,50 @@
+.categories__topbar {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+
+  @include extra-large {
+    flex-direction: column;
+  }
+}
+
+.categories__title {
+  @include titles(72px);
+}
+
+.categories__label {
+  display: flex;
+  align-items: center;
+
+  @include extra-large {
+    margin-left: 8px;
+    margin-top: 10px;
+  }
+
+}
+
+.categories__label-title {
+  text-transform: uppercase;
+  color: $grey;
+  font-size: 18px;
+
+  @include medium {
+    font-size: 14px;
+  }
+}
+
+.categories__label-img-wrap {
+  margin-left: 20px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  @include medium {
+    width: 40px;
+  }
+}
+
+.categories__label-img {
+  display: block;
+  max-width: 100%;
+}

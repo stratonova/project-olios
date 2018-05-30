@@ -1,0 +1,5 @@
+.logo {
+  @include small {
+    display: none;
+  }
+}

@@ -1,0 +1,103 @@
+.menu-btn {
+  @include size(87px, 87px);
+  position: fixed;
+  right: 55px;
+  top: 80px;
+  display: block;
+  background: #fff center center no-repeat;
+  background-image: url('../img/icons/menu.svg');
+  box-shadow: 0px 0px 25px rgba(219, 219, 219, .5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow .1s ease-in-out;
+  z-index: 99;
+
+  &:hover {
+    box-shadow: 5px 5px 35px rgba(219, 219, 219, .8);
+  }
+
+  @include medium {
+    @include size(65px, 65px);
+    top: 35px;
+    right: 35px;
+  }
+
+  @include small {
+    @include size(50px, 50px);
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.nav {
+  @include size(370px, 100vh);
+  background: #fff;
+  box-shadow: -5px 0 10px rgba(0, 0, 0, .05);
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  will-change: transform;
+  transition: transform .1s ease-in-out;
+  padding: 180px 60px 0 50px;
+  overflow-y: scroll;
+  z-index: 66;
+
+  @include small {
+    width: 100%;
+    padding-top: 75px;
+    padding-left: 40px;
+  }
+}
+
+.input-menu-btn {
+  display: none;
+
+  &:checked + .menu-btn {
+    background-image: url('../img/icons/close.svg');
+  }
+
+  &:checked ~ .nav {
+    transform: translateX(0);
+  }
+}
+
+.nav__list {
+  @include reset-list;
+  margin: 100px 0 0 0;
+
+  @include small {
+    margin-top: 30px;
+  }
+}
+
+.nav__item {
+  &:not(:first-child) {
+    margin-top: 75px;
+  }
+}
+
+.nav__link {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav__title {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: $grey;
+}
+
+.nav__icon-wrap {
+  margin-left: 36px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__icon {
+  display: block;
+  max-width: 100%;
+}

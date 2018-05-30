@@ -1,0 +1,52 @@
+.aside-nav {
+  margin-top: 150px;
+
+  @include small {
+    margin: 0;
+  }
+}
+
+.aside-nav__list {
+  @include reset-list;
+  @include small {
+    display: flex;
+  }
+}
+
+
+.aside-nav__item {
+
+  &:not(:first-child) {
+    margin-top: 80px;
+
+    @include small {
+      margin: 0 0 0 25px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.aside-nav__link {
+  display: flex;
+  justify-content: center;
+
+  @include small {
+    align-items: center;
+  }
+}
+
+.aside-nav__icon {
+  display: block;
+  max-width: 36px;
+
+  @include small {
+    max-width: 25px;
+  }
+}
+
+.aside-nav__icon--home {
+  @include small {
+    max-width: 20px;
+  }
+}

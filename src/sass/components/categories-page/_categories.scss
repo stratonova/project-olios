@@ -1,0 +1,10 @@
+.categories {
+  padding-top: 75px;
+  @media screen and (max-width: 1571px) {
+    padding-right: 150px;
+  }
+
+  @include extra-large {
+    padding-right: 0;
+  }
+}
